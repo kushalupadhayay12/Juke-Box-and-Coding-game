@@ -1,0 +1,14 @@
+package com.crio.jukebox.repositories;
+
+import java.util.List;
+import java.util.Optional;
+import com.crio.jukebox.entities.Song;
+
+public interface ISongRepository {
+    Song save(Song song);
+    boolean existsById(Long id);
+    Optional<Song> findById(Long id);
+    List<Song> findAll();
+    void deleteById(Long id);
+    long count();
+}
